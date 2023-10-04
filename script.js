@@ -1,8 +1,8 @@
   // script.js
-
-
+  import dotenv from 'dotenv';
+  dotenv.config(); 
   // Initialize Algolia clients
-  const client = algoliasearch('LF2MNJCP52', '7ac50008d4f9e058d0616e0f1e587c3b');
+  const client = algoliasearch(process.env.API_KEY, process.env.SEARCH_ONLY_API_KEY);
 
   // Initialize Algolia index
   const index = client.initIndex('new_data');
